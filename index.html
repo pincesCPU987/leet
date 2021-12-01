@@ -6,7 +6,14 @@
   <title>L33T SP34K TR4N5L4T0R (|_ [- [- '|'   $ |> [- /-\ |<   '|' /2 /-\ |\| $ |_ /-\ '|' [] /2)</title>
 </head>
 <body>
-  <textarea class="txtarea" id="input" oninput="refreshIn()"></textarea><textarea class="txtarea" id="output" oninput="refreshOut()"></textarea><div class="divv" id="inDiv">INPUT</div><div class="divv" id="outDiv">OUTPUT</div>
+  <textarea class="txtarea" id="input" oninput="refreshIn()"></textarea><textarea class="txtarea" id="output" oninput="refreshOut()"></textarea><center><p>&larr;INPUT OUTPUT&rarr;</p></center>
+  <div class="callout">
+    <div class="callout-header">Disclaimer</div>
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <div class="callout-container">
+      <p>This translator is not perfect. Translations to normal text may appear weird, but they should be close enough to the original to read them.</p><p>Sorry for the inconvenience,</p><p>pincesCPU987</p>
+    </div>
+  </div>
 </body>
 <style>
   body {
@@ -26,21 +33,37 @@
     top:100px;
     right:5%;
   }
-  .divv {
-    position:fixed;
-  }
   .txtarea:focus {
     outline:solid 1px #fff;
   }
-  #inDiv {
-    top:75px;
-    left:20%;
-    width:10%;
+  .callout {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 300px;
   }
-  #outDiv {
-    top:75px;
-    right:20%;
-    width:10%;
+  .callout-header {
+    padding: 25px 15px;
+    background: #555;
+    font-size: 30px;
+    color: white;
+  }
+  .callout-container {
+    padding: 15px;
+    background-color: #ccc;
+    color: black
+  }
+  .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .closebtn:hover {
+    color: lightgrey;
   }
 </style>
 <script>
